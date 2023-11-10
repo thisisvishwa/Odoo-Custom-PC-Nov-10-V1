@@ -1,0 +1,49 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Order Processing Form View -->
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">order.form</field>
+            <field name="model">custom_pc_builder_module.order</field>
+            <field name="arch" type="xml">
+                <form string="Order">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="user_id"/>
+                            <field name="component_ids"/>
+                            <field name="total_price"/>
+                            <field name="status"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Order Processing Tree View -->
+        <record id="view_order_tree" model="ir.ui.view">
+            <field name="name">order.tree</field>
+            <field name="model">custom_pc_builder_module.order</field>
+            <field name="arch" type="xml">
+                <tree string="Order">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="total_price"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Order Processing Action -->
+        <record id="action_order" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="res_model">custom_pc_builder_module.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Order Processing Menu Item -->
+        <menuitem id="menu_order" name="Orders" parent="custom_pc_builder_module.menu_custom_pc_builder" action="custom_pc_builder_module.action_order"/>
+    </data>
+</odoo>
+```

@@ -1,0 +1,23 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="mobile_responsiveness_view_template" name="mobile_responsiveness_view">
+            <t t-call="web.html_container">
+                <t t-call="web.login_layout">
+                    <div class="o_mobile_responsiveness">
+                        <div id="mobile-responsiveness" class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2>Mobile Responsiveness</h2>
+                                    <p>Our interface is optimized for use on various devices. Enjoy a seamless experience on your mobile device.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
+```

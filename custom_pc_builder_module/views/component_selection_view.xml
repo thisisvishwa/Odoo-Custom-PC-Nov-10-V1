@@ -1,0 +1,50 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_component_selection_form" model="ir.ui.view">
+            <field name="name">component.selection.form</field>
+            <field name="model">custom_pc_builder_module.component</field>
+            <field name="arch" type="xml">
+                <form string="Component Selection">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="manufacturer"/>
+                            <field name="price"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_component_selection_tree" model="ir.ui.view">
+            <field name="name">component.selection.tree</field>
+            <field name="model">custom_pc_builder_module.component</field>
+            <field name="arch" type="xml">
+                <tree string="Component Selection">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="manufacturer"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_component_selection" model="ir.actions.act_window">
+            <field name="name">Component Selection</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">custom_pc_builder_module.component</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click to start selecting your PC components.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_component_selection" name="Component Selection" parent="custom_pc_builder_module.menu_custom_pc_builder" sequence="10" action="action_component_selection"/>
+    </data>
+</odoo>
+```

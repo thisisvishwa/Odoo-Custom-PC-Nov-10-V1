@@ -1,0 +1,40 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="3d_visualization_view_form" model="ir.ui.view">
+            <field name="name">3d.visualization.form</field>
+            <field name="model">custom.pc.builder</field>
+            <field name="arch" type="xml">
+                <form string="3D Visualization">
+                    <sheet>
+                        <group>
+                            <field name="3d_visualization" widget="html"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="3d_visualization_view_tree" model="ir.ui.view">
+            <field name="name">3d.visualization.tree</field>
+            <field name="model">custom.pc.builder</field>
+            <field name="arch" type="xml">
+                <tree string="3D Visualization">
+                    <field name="3d_visualization"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="3d_visualization_view_action" model="ir.actions.act_window">
+            <field name="name">3D Visualization</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">custom.pc.builder</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="3d_visualization_view_tree"/>
+        </record>
+
+        <menuitem id="3d_visualization_view_menu" name="3D Visualization" parent="custom_pc_builder_module.menu_custom_pc_builder" action="3d_visualization_view_action"/>
+    </data>
+</odoo>
+```

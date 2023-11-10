@@ -1,0 +1,48 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Reviews and Ratings Form View -->
+        <record id="view_review_form" model="ir.ui.view">
+            <field name="name">review.form</field>
+            <field name="model">custom_pc_builder_module.review</field>
+            <field name="arch" type="xml">
+                <form string="Review">
+                    <sheet>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="component_id"/>
+                            <field name="rating"/>
+                            <field name="comment"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Reviews and Ratings Tree View -->
+        <record id="view_review_tree" model="ir.ui.view">
+            <field name="name">review.tree</field>
+            <field name="model">custom_pc_builder_module.review</field>
+            <field name="arch" type="xml">
+                <tree string="Reviews">
+                    <field name="user_id"/>
+                    <field name="component_id"/>
+                    <field name="rating"/>
+                    <field name="comment"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Reviews and Ratings Action -->
+        <record id="action_reviews" model="ir.actions.act_window">
+            <field name="name">Reviews</field>
+            <field name="res_model">custom_pc_builder_module.review</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Reviews and Ratings Menu Item -->
+        <menuitem id="menu_reviews" name="Reviews" parent="custom_pc_builder_module.menu_custom_pc_builder" action="action_reviews"/>
+    </data>
+</odoo>
+```

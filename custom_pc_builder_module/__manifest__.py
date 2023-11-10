@@ -1,0 +1,30 @@
+```python
+{
+    'name': 'Custom PC Builder',
+    'version': '1.0',
+    'category': 'Sales',
+    'summary': 'Module for custom PC building',
+    'sequence': 10,
+    'license': 'LGPL-3',
+    'author': 'Your Company',
+    'website': 'https://www.yourcompany.com',
+    'depends': ['base', 'sale', 'product', 'stock'],
+    'data': [
+        'views/component_selection_view.xml',
+        'views/compatibility_checker_view.xml',
+        'views/price_estimator_view.xml',
+        'views/3d_visualization_view.xml',
+        'views/user_account_integration_view.xml',
+        'views/order_processing_view.xml',
+        'views/advanced_customization_view.xml',
+        'views/reviews_ratings_view.xml',
+        'views/multi_language_support_view.xml',
+        'views/mobile_responsiveness_view.xml',
+        'security/ir.model.access.csv',
+    ],
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}
+```

@@ -1,0 +1,85 @@
+/* Styles for Component Selection Interface */
+#component-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles for Compatibility Checker Interface */
+#compatibility-checker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for Price Estimation Interface */
+#price-estimator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles for 3D Visualization Interface */
+#3d-visualization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for User Account Interface */
+#user-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for Order Processing Interface */
+#order-processing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for Advanced Customization Interface */
+#advanced-customization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for Reviews and Ratings Interface */
+#reviews-ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for Multi-language Support Interface */
+#multi-language-support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for Mobile Responsiveness Interface */
+#mobile-responsiveness {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    #component-selection,
+    #compatibility-checker,
+    #price-estimator,
+    #3d-visualization,
+    #user-account,
+    #order-processing,
+    #advanced-customization,
+    #reviews-ratings,
+    #multi-language-support,
+    #mobile-responsiveness {
+        flex-direction: column;
+    }
+}

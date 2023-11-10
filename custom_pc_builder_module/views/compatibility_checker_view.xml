@@ -1,0 +1,51 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_form_compatibility_checker" model="ir.ui.view">
+            <field name="name">compatibility.checker.form</field>
+            <field name="model">compatibility.checker</field>
+            <field name="arch" type="xml">
+                <form string="Compatibility Checker">
+                    <sheet>
+                        <group>
+                            <field name="selectedComponents" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="compatibilityStatus" readonly="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="checkCompatibility" string="Check Compatibility" type="object" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_compatibility_checker" model="ir.ui.view">
+            <field name="name">compatibility.checker.tree</field>
+            <field name="model">compatibility.checker</field>
+            <field name="arch" type="xml">
+                <tree string="Compatibility Checker">
+                    <field name="selectedComponents"/>
+                    <field name="compatibilityStatus"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_compatibility_checker" model="ir.actions.act_window">
+            <field name="name">Compatibility Checker</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">compatibility.checker</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click to start checking compatibility of your selected components.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_compatibility_checker" name="Compatibility Checker" parent="base.menu_custom" sequence="10" action="action_compatibility_checker"/>
+    </data>
+</odoo>
+```

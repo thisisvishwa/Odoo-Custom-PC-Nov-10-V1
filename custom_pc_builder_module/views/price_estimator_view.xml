@@ -1,0 +1,33 @@
+```xml
+<odoo>
+    <data>
+        <!-- Price Estimator View -->
+        <record id="view_price_estimator_form" model="ir.ui.view">
+            <field name="name">price.estimator.form</field>
+            <field name="model">custom_pc_builder_module.price</field>
+            <field name="arch" type="xml">
+                <form string="Price Estimator">
+                    <sheet>
+                        <group>
+                            <field name="selectedComponents"/>
+                            <field name="totalPrice"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Price Estimator Action -->
+        <record id="action_price_estimator" model="ir.actions.act_window">
+            <field name="name">Price Estimator</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">custom_pc_builder_module.price</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_price_estimator_form"/>
+        </record>
+
+        <!-- Price Estimator Menu -->
+        <menuitem id="menu_price_estimator" name="Price Estimator" parent="custom_pc_builder_module.main_menu" action="action_price_estimator"/>
+    </data>
+</odoo>
+```
