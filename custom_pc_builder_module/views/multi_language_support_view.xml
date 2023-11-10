@@ -1,0 +1,31 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_multi_language_support_form" model="ir.ui.view">
+            <field name="name">multi.language.support.form</field>
+            <field name="model_id" ref="model_multi_language_support"/>
+            <field name="arch" type="xml">
+                <form string="Multi Language Support">
+                    <sheet>
+                        <group>
+                            <field name="language"/>
+                            <field name="translation"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_multi_language_support" model="ir.actions.act_window">
+            <field name="name">Multi Language Support</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">multi.language.support</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_multi_language_support_form"/>
+        </record>
+
+        <menuitem id="menu_multi_language_support" name="Multi Language Support" parent="base.menu_custom" sequence="20" action="action_multi_language_support"/>
+    </data>
+</odoo>
+```

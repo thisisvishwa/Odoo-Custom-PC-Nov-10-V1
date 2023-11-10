@@ -1,0 +1,44 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_form_advanced_customization" model="ir.ui.view">
+            <field name="name">advanced.customization.form</field>
+            <field name="model">custom.pc.builder</field>
+            <field name="arch" type="xml">
+                <form string="Advanced Customization">
+                    <sheet>
+                        <group>
+                            <field name="custom_cooling"/>
+                            <field name="custom_lighting"/>
+                            <field name="casing_modifications"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_advanced_customization" model="ir.ui.view">
+            <field name="name">advanced.customization.tree</field>
+            <field name="model">custom.pc.builder</field>
+            <field name="arch" type="xml">
+                <tree string="Advanced Customization">
+                    <field name="custom_cooling"/>
+                    <field name="custom_lighting"/>
+                    <field name="casing_modifications"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_advanced_customization" model="ir.actions.act_window">
+            <field name="name">Advanced Customization</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">custom.pc.builder</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_tree_advanced_customization"/>
+        </record>
+
+        <menuitem id="menu_advanced_customization" name="Advanced Customization" parent="custom_pc_builder_module.menu_custom_pc_builder" action="action_advanced_customization"/>
+    </data>
+</odoo>
+```
